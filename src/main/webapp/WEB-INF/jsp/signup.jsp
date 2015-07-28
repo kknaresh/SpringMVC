@@ -9,10 +9,13 @@
 
 		<form:form modelAttribute="signupForm" role="form">
 
+			<form:errors />
+
 			<div class="form-group">
 				<form:label path="email">Email address</form:label>
 				<form:input path="email" type="email" class="form-control"
 					placeholder="Enter email" />
+				<form:errors cssClass="error" path="email" />
 				<p class="help-block">Enter a unique email address. It will also
 					be your login id.</p>
 			</div>
@@ -21,6 +24,7 @@
 				<form:label path="name">Name</form:label>
 				<form:input path="name" class="form-control"
 					placeholder="Enter name" />
+				<form:errors cssClass="error" path="name" />
 				<p class="help-block">Enter your display name.</p>
 			</div>
 
@@ -28,6 +32,7 @@
 				<form:label path="password">Password</form:label>
 				<form:password path="password" class="form-control"
 					placeholder="Password" />
+				<form:errors cssClass="error" path="password" />
 			</div>
 
 			<button type="submit" class="btn btn-default">Submit</button>
