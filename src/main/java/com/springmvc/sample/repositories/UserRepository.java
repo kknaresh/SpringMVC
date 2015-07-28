@@ -6,8 +6,8 @@ import com.springmvc.sample.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 	
-	//Find by email method
-	
 	User findByEmail(String email);
-	
+
+	User findByForgotPasswordCode(String forgotPasswordCode);
+
 }

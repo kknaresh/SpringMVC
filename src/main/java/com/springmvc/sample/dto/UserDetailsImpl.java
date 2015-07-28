@@ -14,7 +14,7 @@ import com.springmvc.sample.entities.User;
 public class UserDetailsImpl implements UserDetails {
 	
 
-	private static final long serialVersionUID = 5197941260523577515L;
+private static final long serialVersionUID = 5197941260523577515L;
 	
 	private User user;
 	
@@ -74,5 +74,6 @@ public class UserDetailsImpl implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
+
 
 }

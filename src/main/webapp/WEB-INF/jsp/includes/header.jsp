@@ -12,7 +12,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Up and running with Spring Framework </title>
+<title>Up and running with Spring Framework</title>
 
 <!-- Bootstrap -->
 <link href="/public/lib/bootstrap/css/bootstrap.min.css"
