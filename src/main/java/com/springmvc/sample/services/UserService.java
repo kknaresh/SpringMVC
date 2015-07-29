@@ -22,4 +22,5 @@ public interface UserService {
 	public abstract User findOne(long userId);
 
 	public abstract void update(long userId, UserEditForm userEditForm);
+
 }

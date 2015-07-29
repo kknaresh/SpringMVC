@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 public class SmtpMailSender implements MailSender {
@@ -22,8 +23,12 @@ public class SmtpMailSender implements MailSender {
 	}
 
 	@Override
+	@Async
 	public void send(String to, String subject, String body)
 			throws MessagingException {
+		
+		logger.info("Sending SMTP mail from thread " + Thread.currentThread().getName()); // toString gives more info    	
+
 		MimeMessage message = javaMailSender.createMimeMessage();
 		MimeMessageHelper helper;
 

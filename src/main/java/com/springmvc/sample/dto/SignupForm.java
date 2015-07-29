@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 import com.springmvc.sample.entities.User;
 
 public class SignupForm {
-
+	
 	@NotNull
 	@Size(min=1, max=255)
 	@Pattern(regexp=User.EMAIL_PATTERN, message="{emailPatternError}")
@@ -45,6 +45,8 @@ public class SignupForm {
 		return "SignupForm [email=" + email + ", name=" + name + ", password="
 				+ password + "]";
 	}
+
+	
 }
 
 
